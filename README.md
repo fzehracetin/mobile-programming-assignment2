@@ -1,1 +1,1 @@
-# mobile-programming-assignment2
+# Introduction to Mobile Programming Assignment 2
