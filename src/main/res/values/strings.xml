@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Fmail</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="langs">
+        <item>Türkçe</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+    <string name="title_activity_menu">Welcome</string>
+
+
+</resources>
