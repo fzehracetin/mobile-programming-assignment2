@@ -25,8 +25,11 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
     Toast toast, toast2;
     double gravity;
     float x, y, z;
+    double oldVector = 0;
     boolean count = false;
     ConstraintLayout layout;
+    Runnable timerRunnable;
+    Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +72,7 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
     }
 
     public void timer() {
-        Handler handler = new Handler();
-        Runnable timerRunnable;
+        handler = new Handler();
         handler.postDelayed(timerRunnable = new Runnable() {
             @Override
             public void run() {
@@ -86,7 +88,6 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
                 }
             }
         }, 5000);
-        handler.removeCallbacks(timerRunnable);
     }
 
     protected void onResume() {
@@ -110,14 +111,16 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
                     String.valueOf(vector) + "\n" + String.valueOf(count);
 
             sensorBlank.setText(text);*/
-
-            if (vector < 1.1 && ! count) {
-                count = true;
-                timer();
+            if (oldVector != 0) {
+                if (oldVector - vector < 0.10 && !count) {
+                    count = true;
+                    timer();
+                } else if (oldVector - vector > 0.10) {
+                    count = false;
+                    handler.removeCallbacks(timerRunnable);
+                }
             }
-            else if (vector > 1.1) {
-                count = false;
-            }
+            oldVector = vector;
         }
         else if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
             float maxValue = light.getMaximumRange();
@@ -144,6 +147,13 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         super.onDestroy();
         mSensorManager.unregisterListener(this);
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        handler.removeCallbacks(timerRunnable);
+    }
+
 
     @Override
     public void onBackPressed() {
