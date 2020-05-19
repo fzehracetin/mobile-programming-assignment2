@@ -18,7 +18,7 @@ Gelen Arama ve SMS:
 AsycnTask ile random sayı üretilmitir. Üretilen bu sayılar Progress Bar'a eklenmektedir ve yüzde dolunca ses çalarak görüntü gösterilmektedir.
 
 <p align="center">
-  <img src="Screenshots/indirme.png">
+  <img src="Screenshots/indirme.png" width="50%">
 </p>
 
 3. **Alarm Oluşturma ve İptal Etme**
@@ -26,7 +26,7 @@ AsycnTask ile random sayı üretilmitir. Üretilen bu sayılar Progress Bar'a ek
 TimePicker ile saat seçilmektedir. BroadcastReceiver ile seçilen bu saatte AlarmManager kullanılarak Vibration ve ses ile Notification gönderilmektedir. Oluşturulan alarm iptal edilebilmektedir.
 
 <p align="center">
-  <img src="Screenshots/alarm.png">
+  <img src="Screenshots/alarm.png" width="50%">
 </p>
 
 4. **Son Konumu Alma ve Whatsapp Aracılığıyla Gönderme**
@@ -34,7 +34,7 @@ TimePicker ile saat seçilmektedir. BroadcastReceiver ile seçilen bu saatte Ala
 Cihazın son konumu FusedLocationProviderClient üzerinden çekilmektedir. Latitude ve longitude değerlerinden bir maps linki oluşturulmakta ve bu link Whatsapp aracılığıyla gönderilmektedir.
 
 <p align="center">
-<img src="Screenshots/location.jpg" width="40%">.
+<img src="Screenshots/location.jpg" width="20%">.
 </p>
 
 
