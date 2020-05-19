@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about"
+            android:title="User Settings" />
+        <item android:id="@+id/nav_mail"
+            android:icon="@drawable/ic_mail"
+            android:title="Compose Mail" />
+        <item android:id="@+id/nav_list"
+            android:icon="@drawable/ic_list"
+            android:title="List Users" />
+        <item android:id="@+id/nav_note"
+            android:icon="@drawable/ic_note"
+            android:title="Notes" />
+        <item android:id="@+id/nav_sensor"
+            android:icon="@drawable/ic_sensor"
+            android:title="Sensors" />
+        <item android:id="@+id/nav_download"
+            android:icon="@drawable/ic_file_download"
+            android:title="Download File"/>
+        <item android:id="@+id/nav_alarm"
+            android:icon="@drawable/ic_alarm_black_24dp"
+            android:title="Set Alarm"/>
+        <item android:id="@+id/nav_location"
+            android:icon="@drawable/ic_place"
+            android:title="Send Location"/>
+    </group>
+</menu>
