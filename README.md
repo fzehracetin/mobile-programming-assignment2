@@ -1,6 +1,8 @@
 # Mobil Programlamaya Giriş Ödev 2 ve Ödev 3
 
-## Ödev 3 için Video Linki
+## Ödev 3 için Hazırladığım Videonun Linki
+
+https://youtu.be/CF3RLShAqSA
 
 ## Ödev 3 için Eklenen Kısımlar
 
