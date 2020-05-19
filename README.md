@@ -1,4 +1,4 @@
-# Introduction to Mobile Programming Assignment 2
+# Mobil Programlamaya Giriş Ödev 2 ve Ödev 3
 
 ## Ödev 3 için Video Linki
 
@@ -18,7 +18,7 @@ Gelen Arama ve SMS:
 AsycnTask ile random sayı üretilmitir. Üretilen bu sayılar Progress Bar'a eklenmektedir ve yüzde dolunca ses çalarak görüntü gösterilmektedir.
 
 <p align="center">
-  <img width="40%" src="Screenshots/indirme.png">
+  <img width="30%" src="Screenshots/indirme.png">
 </p>
 
 3. **Alarm Oluşturma ve İptal Etme**
