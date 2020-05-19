@@ -59,6 +59,18 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                 sensorIntent.putExtra("USERNAME", USERNAME);
                 startActivity(sensorIntent);
                 break;
+            case R.id.nav_download:
+                Intent downloadIntent = new Intent(MenuActivity.this, AsyncTaskActivity.class);
+                startActivity(downloadIntent);
+                break;
+            case R.id.nav_alarm:
+                Intent alarmIntent = new Intent(MenuActivity.this, AlarmActivity.class);
+                startActivity(alarmIntent);
+                break;
+            case R.id.nav_location:
+                Intent locationIntent = new Intent(MenuActivity.this, LocationActivity.class);
+                startActivity(locationIntent);
+                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;

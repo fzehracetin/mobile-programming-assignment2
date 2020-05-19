@@ -1,7 +1,10 @@
 package com.example.myfirstfinalapplication;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -11,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import java.util.ArrayList;
 
@@ -38,7 +42,21 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        if (!haveReceivePermission()) {
+            haveReceivePermission();
+        }
+        if(!haveSendPermission())
+            haveSendPermission();
+        else
+            Toast.makeText(getApplicationContext(), "İzin var", Toast.LENGTH_SHORT);
+
+        if(!haveReadStatePermission())
+            haveReadStatePermission();
+        if(!haveReadPermission())
+            haveReadPermission();
+
+
+            loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -49,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                     menuIntent.putExtra("USERNAME", username.getText().toString());
                     startActivity(menuIntent);
                     count.setText("0");
+
                 }
                 else {
                     username.setText("");
@@ -58,6 +77,58 @@ public class MainActivity extends AppCompatActivity {
 
         });
     }
+
+    public boolean haveReceivePermission() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(Manifest.permission.RECEIVE_SMS) == PackageManager.PERMISSION_GRANTED) {
+                return true;
+            }
+            else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECEIVE_SMS}, 1);
+                return false;
+            }
+        }
+        return true;
+    }
+    public boolean haveSendPermission() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
+                return true;
+            }
+            else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.SEND_SMS}, 2);
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean haveReadPermission() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(Manifest.permission.READ_SMS) == PackageManager.PERMISSION_GRANTED) {
+                return true;
+            }
+            else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_SMS}, 3);
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public boolean haveReadStatePermission() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED) {
+                return true;
+            }
+            else {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_PHONE_STATE}, 4);
+                return false;
+            }
+        }
+        return true;
+    }
+
 
     private boolean checkPassword (String username, String password, ArrayList<Person> persons,
                                    TextView count) {
