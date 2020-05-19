@@ -10,7 +10,7 @@ Bu kısım için bir aktivite oluşturulmamıştır. Sadece gelen arama ve SMS'l
 
 Gelen Arama ve SMS:
 <p align="center">
-  <img src="Screenshots/aramalar.png">
+  <img src="Screenshots/aramalar.png" height="50%">
 </p>
 
 2. **AsyncTask'lar kullanılarak Progress Bar Üzerinden Hayali İndirme Yapma**
