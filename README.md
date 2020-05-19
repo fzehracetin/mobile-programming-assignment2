@@ -17,7 +17,7 @@ Gelen Arama ve SMS:
 
 **2. AsyncTask'lar kullanılarak Progress Bar Üzerinden Hayali İndirme Yapma**
 
-AsycnTask ile random sayı üretilmitir. Üretilen bu sayılar Progress Bar'a eklenmektedir ve yüzde dolunca ses çalarak görüntü gösterilmektedir.
+AsycnTask ile random sayı üretilmiştir. Üretilen bu sayılar Progress Bar'a eklenmektedir ve yüzde dolunca ses çalarak görüntü gösterilmektedir.
 
 <p align="center">
   <img width="30%" src="Screenshots/indirme.png">
