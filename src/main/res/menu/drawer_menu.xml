@@ -19,5 +19,14 @@
         <item android:id="@+id/nav_sensor"
             android:icon="@drawable/ic_sensor"
             android:title="Sensors" />
+        <item android:id="@+id/nav_download"
+            android:icon="@drawable/ic_file_download"
+            android:title="Download File"/>
+        <item android:id="@+id/nav_alarm"
+            android:icon="@drawable/ic_alarm_black_24dp"
+            android:title="Set Alarm"/>
+        <item android:id="@+id/nav_location"
+            android:icon="@drawable/ic_place"
+            android:title="Send Location"/>
     </group>
 </menu>
