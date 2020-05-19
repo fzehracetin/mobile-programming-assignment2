@@ -34,7 +34,7 @@ TimePicker ile saat seçilmektedir. BroadcastReceiver ile seçilen bu saatte Ala
 Cihazın son konumu FusedLocationProviderClient üzerinden çekilmektedir. Latitude ve longitude değerlerinden bir maps linki oluşturulmakta ve bu link Whatsapp aracılığıyla gönderilmektedir.
 
 <p align="center">
-<img src="Screenshots/location.jpg" width="20%">.
+<img src="Screenshots/location.jpg" width="30%">.
 </p>
 
 
