@@ -18,7 +18,7 @@ Gelen Arama ve SMS:
 AsycnTask ile random sayı üretilmitir. Üretilen bu sayılar Progress Bar'a eklenmektedir ve yüzde dolunca ses çalarak görüntü gösterilmektedir.
 
 <p align="center">
-  <img width="50%" src="Screenshots/indirme.png">
+  <img width="10%" src="Screenshots/indirme.png">
 </p>
 
 3. **Alarm Oluşturma ve İptal Etme**
